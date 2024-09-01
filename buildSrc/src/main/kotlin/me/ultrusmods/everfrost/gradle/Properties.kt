@@ -10,7 +10,7 @@ object Properties {
     const val MOD_ID = "everfrost"
     const val MOD_AUTHOR = "UltrusBot"
     const val MOD_CONTRIBUTORS = ""
-    const val DESCRIPTION = "Mod Description Here"
+    const val DESCRIPTION = "A dimension frozen over, with relics of the past scattered throughout."
     const val LICENSE = "ARR"
 
     const val HOMEPAGE = "https://modrinth.com/project/modrinth-project"

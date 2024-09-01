@@ -1,2 +1,2 @@
-# Ultrus MultiLoader Template
-Based on [Greenhouse MultiLoader Template](https://github.com/GreenhouseTeam/Greenhouse-MultiLoader-Template)
+# Everfrost
+A dimension frozen over, with relics of the past scattered throughout.
