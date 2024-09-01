@@ -32,14 +32,14 @@ neoForge {
             client()
             gameDirectory.set(file("runs/client"))
             sourceSet = sourceSets["test"]
-            jvmArguments.set(setOf("-Dmixin.debug.verbose=true", "-Dmixin.debug.export=true"))
+//            jvmArguments.set(setOf("-Dmixin.debug.verbose=true", "-Dmixin.debug.export=true"))
         }
         create("server") {
             server()
             gameDirectory.set(file("runs/server"))
             programArgument("--nogui")
             sourceSet = sourceSets["test"]
-            jvmArguments.set(setOf("-Dmixin.debug.verbose=true", "-Dmixin.debug.export=true"))
+//            jvmArguments.set(setOf("-Dmixin.debug.verbose=true", "-Dmixin.debug.export=true"))
         }
     }
 
