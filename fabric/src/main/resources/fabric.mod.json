@@ -21,12 +21,19 @@
     "entrypoints": {
         "main": [
           "me.ultrusmods.everfrost.EverfrostModFabric"
+        ],
+        "client": [
+            "me.ultrusmods.everfrost.client.EverfrostFabricClient"
+        ],
+        "fabric-datagen": [
+            "me.ultrusmods.everfrost.datagen.EverfrostDataGen"
         ]
     },
     "mixins": [
         "${mod_id}.mixins.json",
         "${mod_id}.fabric.mixins.json"
     ],
+    "accessWidener": "${mod_id}.accesswidener",
     "depends": {
         "fabricloader": "${fabric_loader_range}",
         "fabric-api": "*",

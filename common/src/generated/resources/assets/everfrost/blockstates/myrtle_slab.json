@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "everfrost:block/myrtle_slab"
+    },
+    "type=double": {
+      "model": "everfrost:block/myrtle_planks"
+    },
+    "type=top": {
+      "model": "everfrost:block/myrtle_slab_top"
+    }
+  }
+}

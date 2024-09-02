@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "everfrost:block/myrtle_log",
+    "side": "everfrost:block/myrtle_log"
+  }
+}

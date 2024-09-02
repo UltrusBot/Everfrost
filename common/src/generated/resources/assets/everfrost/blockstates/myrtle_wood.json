@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "everfrost:block/myrtle_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "everfrost:block/myrtle_wood"
+    },
+    "axis=z": {
+      "model": "everfrost:block/myrtle_wood",
+      "x": 90
+    }
+  }
+}

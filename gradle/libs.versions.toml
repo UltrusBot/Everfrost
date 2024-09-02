@@ -4,6 +4,7 @@ fabric_loader = "0.15.11"
 fabric_api = "0.100.7+1.21"
 neoforge = "21.0.111-beta"
 modmenu = "11.0.1"
+emi = "1.1.10+1.21"
 
 # Mixin
 fabric_mixin = "0.15.0+mixin.0.8.7"
@@ -23,7 +24,8 @@ neoforge = { module = "net.minecraftforge:forge", version.ref = "neoforge" }
 
 # Extra Libraries
 modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
-
+emi_fabric = { module = "dev.emi:emi-fabric", version.ref = "emi" }
+emi_neoforge = { module = "dev.emi:emi-neoforge", version.ref = "emi" }
 # Mixin
 fabric_mixin = { module = "net.fabricmc:sponge-mixin", version.ref = "fabric_mixin" }
 mixin_extras = { module = "io.github.llamalad7:mixinextras-common", version.ref = "mixin_extras" }
