@@ -1,5 +1,7 @@
 package me.ultrusmods.everfrost.platform.services;
 
+import net.minecraft.world.level.block.Block;
+
 public interface IPlatformHelper {
 
     /**
@@ -33,4 +35,7 @@ public interface IPlatformHelper {
 
         return isDevelopmentEnvironment() ? "development" : "production";
     }
+
+
+    void addStrippableBlock(Block base, Block stripped);
 }

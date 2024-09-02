@@ -13,6 +13,7 @@ public class EverfrostBlockFamilies {
             .slab(EverfrostBlocks.MYRTLE_SLAB)
             .stairs(EverfrostBlocks.MYRTLE_STAIRS)
             .trapdoor(EverfrostBlocks.MYRTLE_TRAPDOOR)
+            .door(EverfrostBlocks.MYRTLE_DOOR)
             .recipeGroupPrefix("wooden")
             .recipeUnlockedBy("has_planks")
             .getFamily();

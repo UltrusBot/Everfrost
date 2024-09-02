@@ -13,5 +13,6 @@ public class EverfrostModFabric implements ModInitializer {
 
         EverfrostBlocks.init();
         EverfrostItems.init();
+        EverfrostBlocks.registerStrippableBlocks();
     }
 }

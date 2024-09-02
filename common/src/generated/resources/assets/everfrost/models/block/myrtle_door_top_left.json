@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left",
+  "textures": {
+    "bottom": "everfrost:block/myrtle_door_bottom",
+    "top": "everfrost:block/myrtle_door_top"
+  }
+}

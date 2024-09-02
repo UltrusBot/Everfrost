@@ -55,10 +55,15 @@ public class EverfrostTagProviders {
                             EverfrostBlocks.MYRTLE_FENCE_GATE,
                             EverfrostBlocks.MYRTLE_PRESSURE_PLATE,
                             EverfrostBlocks.MYRTLE_SLAB,
-                            EverfrostBlocks.MYRTLE_STAIRS)
+                            EverfrostBlocks.MYRTLE_STAIRS,
+                            EverfrostBlocks.MYRTLE_DOOR,
+                            EverfrostBlocks.MYRTLE_TRAPDOOR
+                    )
                     .addTag(EverFrostBlockTags.MYRTLE_LOGS);
             getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
                     .add(EverfrostBlocks.MYRTLE_TRAPDOOR);
+            getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
+                    .add(EverfrostBlocks.MYRTLE_DOOR);
 
         }
     }

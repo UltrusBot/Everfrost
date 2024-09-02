@@ -1,9 +1,13 @@
 package me.ultrusmods.everfrost.registry;
 
+import me.ultrusmods.everfrost.platform.Services;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
@@ -96,12 +100,26 @@ public class EverfrostBlocks {
                     .noOcclusion()
                     .isValidSpawn(Blocks::never).ignitedByLava()
     );
-
+    @RegisterId("myrtle_door")
+    public static final Block MYRTLE_DOOR = new DoorBlock(
+            EverfrostBlockSetTypes.MYRTLE,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MYRTLE_PLANKS.defaultMapColor())
+                    .strength(3.0F)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()
+    );
+    @RegisterId("myrtle_leaves")
+    public static final Block MYRTLE_LEAVES = leaves(SoundType.GRASS);
 
     public static void init() {
         RegisterUtils.register(EverfrostBlocks.class, BuiltInRegistries.BLOCK);
     }
 
+    public static void registerStrippableBlocks() {
+        Services.PLATFORM.addStrippableBlock(MYRTLE_LOG, STRIPPED_MYRTLE_LOG);
+        Services.PLATFORM.addStrippableBlock(MYRTLE_WOOD, STRIPPED_MYRTLE_WOOD);
+    }
 
 
     public static Block log(MapColor mapColor, MapColor mapColor2) {
@@ -117,5 +135,13 @@ public class EverfrostBlocks {
 
     public static Block woodenButton(BlockSetType blockSetType) {
         return new ButtonBlock(blockSetType, 30, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
+    }
+
+    private static Block leaves(SoundType soundType) {
+        return new LeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.2F).randomTicks().sound(soundType).noOcclusion().isValidSpawn(Blocks::ocelotOrParrot).isSuffocating(EverfrostBlocks::never).isViewBlocking(EverfrostBlocks::never).ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(EverfrostBlocks::never));
+    }
+
+    private static boolean never(BlockState state, BlockGetter blockGetter, BlockPos pos) {
+        return false;
     }
 }

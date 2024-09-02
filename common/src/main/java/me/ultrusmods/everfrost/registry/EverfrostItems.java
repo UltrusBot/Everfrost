@@ -42,6 +42,12 @@ public class EverfrostItems {
     @RegisterId("myrtle_trapdoor")
     public static final Item MYRTLE_TRAPDOOR = new BlockItem(EverfrostBlocks.MYRTLE_TRAPDOOR, new Item.Properties());
 
+    @RegisterId("myrtle_door")
+    public static final Item MYRTLE_DOOR = new BlockItem(EverfrostBlocks.MYRTLE_DOOR, new Item.Properties());
+
+    @RegisterId("myrtle_leaves")
+    public static final Item MYRTLE_LEAVES = new BlockItem(EverfrostBlocks.MYRTLE_LEAVES, new Item.Properties());
+
     public static void init() {
         RegisterUtils.register(EverfrostItems.class, BuiltInRegistries.ITEM);
     }
