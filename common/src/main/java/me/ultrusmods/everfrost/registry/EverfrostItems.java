@@ -1,6 +1,8 @@
 package me.ultrusmods.everfrost.registry;
 
+import me.ultrusmods.everfrost.tag.EverfrostMiscTags;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.BannerPatternItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 
@@ -47,6 +49,9 @@ public class EverfrostItems {
 
     @RegisterId("myrtle_leaves")
     public static final Item MYRTLE_LEAVES = new BlockItem(EverfrostBlocks.MYRTLE_LEAVES, new Item.Properties());
+
+    @RegisterId("snowflake_banner_pattern")
+    public static final Item SNOWFLAKE_BANNER_PATTERN = new BannerPatternItem(EverfrostMiscTags.SNOWFLAKE_PATTERN, new Item.Properties());
 
     public static void init() {
         RegisterUtils.register(EverfrostItems.class, BuiltInRegistries.ITEM);

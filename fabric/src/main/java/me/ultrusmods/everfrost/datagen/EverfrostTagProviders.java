@@ -1,18 +1,19 @@
 package me.ultrusmods.everfrost.datagen;
 
+import me.ultrusmods.everfrost.registry.EverfrostBannerPatterns;
 import me.ultrusmods.everfrost.registry.EverfrostBlocks;
 import me.ultrusmods.everfrost.registry.EverfrostItems;
 import me.ultrusmods.everfrost.tag.EverFrostBlockTags;
 import me.ultrusmods.everfrost.tag.EverFrostItemTags;
+import me.ultrusmods.everfrost.tag.EverfrostMiscTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BannerPattern;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -78,6 +79,18 @@ public class EverfrostTagProviders {
         protected void addTags(HolderLookup.Provider wrapperLookup) {
             getOrCreateTagBuilder(EverFrostItemTags.MYRTLE_LOGS)
                     .add(EverfrostItems.MYRTLE_LOG, EverfrostItems.STRIPPED_MYRTLE_LOG, EverfrostItems.MYRTLE_WOOD, EverfrostItems.STRIPPED_MYRTLE_WOOD);
+        }
+    }
+
+    public static class EverfrostBannerTagsProvider extends FabricTagProvider<BannerPattern> {
+
+        public EverfrostBannerTagsProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+            super(output, Registries.BANNER_PATTERN, registriesFuture);
+        }
+
+        @Override
+        protected void addTags(HolderLookup.Provider wrapperLookup) {
+            this.tag(EverfrostMiscTags.SNOWFLAKE_PATTERN).add(EverfrostBannerPatterns.SNOWFLAKE);
         }
     }
 }

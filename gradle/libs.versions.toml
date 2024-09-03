@@ -4,7 +4,7 @@ fabric_loader = "0.15.11"
 fabric_api = "0.100.7+1.21"
 neoforge = "21.0.111-beta"
 modmenu = "11.0.1"
-emi = "1.1.10+1.21"
+emi = "1.1.12+1.21"
 
 # Mixin
 fabric_mixin = "0.15.0+mixin.0.8.7"
