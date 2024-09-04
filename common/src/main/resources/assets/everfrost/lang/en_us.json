@@ -31,7 +31,9 @@
   "block.everfrost.banner.everfrost.snowflake.red": "Red Snowflake",
   "block.everfrost.banner.everfrost.snowflake.white": "White Snowflake",
   "block.everfrost.banner.everfrost.snowflake.yellow": "Yellow Snowflake",
-  "tag.item.everfrost.myrtle_logs": "Myrtle Logs"
+  "tag.item.everfrost.myrtle_logs": "Myrtle Logs",
+  "block.everfrost.myrtle_sapling": "Myrtle Sapling",
+  "block.everfrost.potted_myrtle_sapling": "Potted Myrtle Sapling"
 
 
 }

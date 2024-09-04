@@ -9,9 +9,10 @@ import java.util.function.BiConsumer;
 public class EverfrostClient {
 
     public static void registerBlockRenderLayers(BiConsumer<Block, RenderType> consumer) {
-         consumer.accept(EverfrostBlocks.MYRTLE_TRAPDOOR, RenderType.cutout());
-         consumer.accept(EverfrostBlocks.MYRTLE_DOOR, RenderType.cutout());
-         consumer.accept(EverfrostBlocks.MYRTLE_LEAVES, RenderType.cutoutMipped());
-
+        consumer.accept(EverfrostBlocks.MYRTLE_TRAPDOOR, RenderType.cutout());
+        consumer.accept(EverfrostBlocks.MYRTLE_DOOR, RenderType.cutout());
+        consumer.accept(EverfrostBlocks.MYRTLE_LEAVES, RenderType.cutoutMipped());
+        consumer.accept(EverfrostBlocks.MYRTLE_SAPLING, RenderType.cutout());
+        consumer.accept(EverfrostBlocks.POTTED_MYRTLE_SAPLING, RenderType.cutout());
     }
 }

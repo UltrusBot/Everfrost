@@ -53,6 +53,9 @@ public class EverfrostItems {
     @RegisterId("snowflake_banner_pattern")
     public static final Item SNOWFLAKE_BANNER_PATTERN = new BannerPatternItem(EverfrostMiscTags.SNOWFLAKE_PATTERN, new Item.Properties());
 
+    @RegisterId("myrtle_sapling")
+    public static final Item MYRTLE_SAPLING = new BlockItem(EverfrostBlocks.MYRTLE_SAPLING, new Item.Properties());
+
     public static void init() {
         RegisterUtils.register(EverfrostItems.class, BuiltInRegistries.ITEM);
     }

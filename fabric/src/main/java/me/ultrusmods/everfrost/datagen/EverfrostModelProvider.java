@@ -21,6 +21,7 @@ public class EverfrostModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.family(EverfrostBlocks.MYRTLE_PLANKS).generateFor(EverfrostBlockFamilies.MYRTLE_PLANKS);
         blockStateModelGenerator.createTrivialBlock(EverfrostBlocks.MYRTLE_LEAVES, TexturedModel.LEAVES);
+        blockStateModelGenerator.createPlant(EverfrostBlocks.MYRTLE_SAPLING, EverfrostBlocks.POTTED_MYRTLE_SAPLING, BlockModelGenerators.TintState.NOT_TINTED);
     }
 
     @Override

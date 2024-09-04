@@ -26,10 +26,11 @@ public class EverfrostBlockLootProvider extends FabricBlockLootTableProvider {
         createSlabItemTable(EverfrostBlocks.MYRTLE_SLAB);
         dropSelf(EverfrostBlocks.MYRTLE_STAIRS);
         dropSelf(EverfrostBlocks.MYRTLE_TRAPDOOR);
-
-
-        this.add(EverfrostBlocks.MYRTLE_SLAB, this::createSlabItemTable);
-        this.add(EverfrostBlocks.MYRTLE_DOOR, this::createDoorTable);
+        add(EverfrostBlocks.MYRTLE_SLAB, this::createSlabItemTable);
+        add(EverfrostBlocks.MYRTLE_DOOR, this::createDoorTable);
+        dropSelf(EverfrostBlocks.MYRTLE_SAPLING);
+        add(EverfrostBlocks.MYRTLE_LEAVES, block -> this.createLeavesDrops(block, EverfrostBlocks.MYRTLE_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
+        dropPottedContents(EverfrostBlocks.POTTED_MYRTLE_SAPLING);
 
 
     }

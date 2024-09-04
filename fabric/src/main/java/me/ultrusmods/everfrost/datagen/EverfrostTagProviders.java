@@ -66,6 +66,11 @@ public class EverfrostTagProviders {
             getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
                     .add(EverfrostBlocks.MYRTLE_DOOR);
 
+            getOrCreateTagBuilder(BlockTags.SAPLINGS)
+                    .add(EverfrostBlocks.MYRTLE_SAPLING);
+            getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
+                    .add(EverfrostBlocks.POTTED_MYRTLE_SAPLING);
+
         }
     }
 

@@ -1,6 +1,7 @@
 package me.ultrusmods.everfrost.registry;
 
 import me.ultrusmods.everfrost.platform.Services;
+import me.ultrusmods.everfrost.registry.worldgen.EverfrostTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -111,6 +112,19 @@ public class EverfrostBlocks {
     );
     @RegisterId("myrtle_leaves")
     public static final Block MYRTLE_LEAVES = leaves(SoundType.GRASS);
+
+    @RegisterId("myrtle_sapling")
+    public static final Block MYRTLE_SAPLING = new SaplingBlock(
+            EverfrostTreeGrowers.MYRTLE,
+            BlockBehaviour.Properties.of()
+                    .noCollission()
+                    .randomTicks()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .pushReaction(PushReaction.DESTROY)
+    );
+    @RegisterId("potted_myrtle_sapling")
+    public static final Block POTTED_MYRTLE_SAPLING = new FlowerPotBlock(MYRTLE_SAPLING, BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY));
 
     public static void init() {
         RegisterUtils.register(EverfrostBlocks.class, BuiltInRegistries.BLOCK);
