@@ -4,6 +4,7 @@ import me.ultrusmods.everfrost.registry.EverfrostBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -32,6 +33,21 @@ public class EverfrostBlockLootProvider extends FabricBlockLootTableProvider {
         add(EverfrostBlocks.MYRTLE_LEAVES, block -> this.createLeavesDrops(block, EverfrostBlocks.MYRTLE_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
         dropPottedContents(EverfrostBlocks.POTTED_MYRTLE_SAPLING);
 
+        dropSelf(EverfrostBlocks.EVERFROST_DIRT);
+        dropSelf(EverfrostBlocks.EVERFROST_SNOWY_DIRT);
+        createDoublePlantShearsDrop(EverfrostBlocks.SNOWY_TALL_GRASS);
+
+        dropSelf(EverfrostBlocks.COBBLED_GLACISTONE);
+        this.add(EverfrostBlocks.GLACISTONE, block -> this.createSingleItemTableWithSilkTouch(block, EverfrostBlocks.COBBLED_GLACISTONE));
+
+        dropSelf(EverfrostBlocks.GLACISTONE_SLAB);
+        dropSelf(EverfrostBlocks.GLACISTONE_STAIRS);
+        dropSelf(EverfrostBlocks.GLACISTONE_BUTTON);
+        dropSelf(EverfrostBlocks.GLACISTONE_PRESSURE_PLATE);
+
+        dropSelf(EverfrostBlocks.COBBLED_GLACISTONE_SLAB);
+        dropSelf(EverfrostBlocks.COBBLED_GLACISTONE_STAIRS);
+        dropSelf(EverfrostBlocks.COBBLED_GLACISTONE_WALL);
 
     }
 }

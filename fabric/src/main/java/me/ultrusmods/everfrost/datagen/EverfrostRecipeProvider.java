@@ -19,6 +19,8 @@ public class EverfrostRecipeProvider extends RecipeProvider {
     public void buildRecipes(RecipeOutput recipeOutput) {
         generateRecipes(recipeOutput, EverfrostBlockFamilies.MYRTLE_PLANKS, FeatureFlags.VANILLA_SET);
         planksFromLogs(recipeOutput, EverfrostItems.MYRTLE_PLANKS, EverFrostItemTags.MYRTLE_LOGS, 4);
+        generateRecipes(recipeOutput, EverfrostBlockFamilies.GLACISTONE, FeatureFlags.VANILLA_SET);
+        generateRecipes(recipeOutput, EverfrostBlockFamilies.COBBLED_GLACISTONE, FeatureFlags.VANILLA_SET);
 
     }
 }

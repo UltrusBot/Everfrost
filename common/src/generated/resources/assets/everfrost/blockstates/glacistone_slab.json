@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "everfrost:block/glacistone_slab"
+    },
+    "type=double": {
+      "model": "everfrost:block/glacistone"
+    },
+    "type=top": {
+      "model": "everfrost:block/glacistone_slab_top"
+    }
+  }
+}

@@ -14,5 +14,6 @@ public class EverfrostClient {
         consumer.accept(EverfrostBlocks.MYRTLE_LEAVES, RenderType.cutoutMipped());
         consumer.accept(EverfrostBlocks.MYRTLE_SAPLING, RenderType.cutout());
         consumer.accept(EverfrostBlocks.POTTED_MYRTLE_SAPLING, RenderType.cutout());
+        consumer.accept(EverfrostBlocks.SNOWY_TALL_GRASS, RenderType.cutout());
     }
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cobbled_glacistone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "everfrost:cobbled_glacistone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "everfrost:cobbled_glacistone_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cobbled_glacistone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "everfrost:cobbled_glacistone_stairs"
+    ]
+  }
+}

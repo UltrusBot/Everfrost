@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "everfrost:block/everfrost_dirt"
+      },
+      {
+        "model": "everfrost:block/everfrost_dirt",
+        "y": 90
+      },
+      {
+        "model": "everfrost:block/everfrost_dirt",
+        "y": 180
+      },
+      {
+        "model": "everfrost:block/everfrost_dirt",
+        "y": 270
+      }
+    ]
+  }
+}

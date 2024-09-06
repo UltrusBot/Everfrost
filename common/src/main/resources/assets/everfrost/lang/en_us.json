@@ -33,7 +33,18 @@
   "block.everfrost.banner.everfrost.snowflake.yellow": "Yellow Snowflake",
   "tag.item.everfrost.myrtle_logs": "Myrtle Logs",
   "block.everfrost.myrtle_sapling": "Myrtle Sapling",
-  "block.everfrost.potted_myrtle_sapling": "Potted Myrtle Sapling"
-
+  "block.everfrost.potted_myrtle_sapling": "Potted Myrtle Sapling",
+  "block.everfrost.everfrost_dirt": "Everfrost Dirt",
+  "block.everfrost.snowy_everfrost_dirt": "Snowy Everfrost Dirt",
+  "block.everfrost.snowy_tall_grass": "Snowy Tall Grass",
+  "block.everfrost.glacistone": "Glacistone",
+  "block.everfrost.glacistone_slab": "Glacistone Slab",
+  "block.everfrost.glacistone_stairs": "Glacistone Stairs",
+  "block.everfrost.glacistone_button": "Glacistone Button",
+  "block.everfrost.glacistone_pressure_plate": "Glacistone Pressure Plate",
+  "block.everfrost.cobbled_glacistone": "Cobbled Glacistone",
+  "block.everfrost.cobbled_glacistone_slab": "Cobbled Glacistone Slab",
+  "block.everfrost.cobbled_glacistone_stairs": "Cobbled Glacistone Stairs",
+  "block.everfrost.cobbled_glacistone_wall": "Cobbled Glacistone Wall"
 
 }

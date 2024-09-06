@@ -11,6 +11,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BannerPattern;
@@ -71,6 +72,27 @@ public class EverfrostTagProviders {
             getOrCreateTagBuilder(BlockTags.FLOWER_POTS)
                     .add(EverfrostBlocks.POTTED_MYRTLE_SAPLING);
 
+            getOrCreateTagBuilder(BlockTags.DIRT)
+                    .add(EverfrostBlocks.EVERFROST_DIRT)
+                    .add(EverfrostBlocks.EVERFROST_SNOWY_DIRT);
+
+            getOrCreateTagBuilder(BlockTags.STONE_PRESSURE_PLATES)
+                    .add(EverfrostBlocks.GLACISTONE_PRESSURE_PLATE);
+
+            getOrCreateTagBuilder(BlockTags.STONE_BUTTONS)
+                    .add(EverfrostBlocks.GLACISTONE_BUTTON);
+
+            getOrCreateTagBuilder(BlockTags.SLABS)
+                    .add(EverfrostBlocks.GLACISTONE_SLAB)
+                    .add(EverfrostBlocks.COBBLED_GLACISTONE_SLAB);
+
+            getOrCreateTagBuilder(BlockTags.STAIRS)
+                    .add(EverfrostBlocks.GLACISTONE_STAIRS)
+                    .add(EverfrostBlocks.COBBLED_GLACISTONE_STAIRS);
+
+            getOrCreateTagBuilder(BlockTags.WALLS)
+                    .add(EverfrostBlocks.COBBLED_GLACISTONE_WALL);
+
         }
     }
 
@@ -84,7 +106,34 @@ public class EverfrostTagProviders {
         protected void addTags(HolderLookup.Provider wrapperLookup) {
             getOrCreateTagBuilder(EverFrostItemTags.MYRTLE_LOGS)
                     .add(EverfrostItems.MYRTLE_LOG, EverfrostItems.STRIPPED_MYRTLE_LOG, EverfrostItems.MYRTLE_WOOD, EverfrostItems.STRIPPED_MYRTLE_WOOD);
+            getOrCreateTagBuilder(ItemTags.PLANKS)
+                    .add(EverfrostItems.MYRTLE_PLANKS);
+            getOrCreateTagBuilder(ItemTags.WOODEN_BUTTONS)
+                    .add(EverfrostItems.MYRTLE_BUTTON);
+            getOrCreateTagBuilder(ItemTags.WOODEN_DOORS)
+                    .add(EverfrostItems.MYRTLE_DOOR);
+            getOrCreateTagBuilder(ItemTags.WOODEN_FENCES)
+                    .add(EverfrostItems.MYRTLE_FENCE);
+            getOrCreateTagBuilder(ItemTags.WOODEN_PRESSURE_PLATES)
+                    .add(EverfrostItems.MYRTLE_PRESSURE_PLATE);
+            getOrCreateTagBuilder(ItemTags.WOODEN_SLABS)
+                    .add(EverfrostItems.MYRTLE_SLAB);
+            getOrCreateTagBuilder(ItemTags.WOODEN_STAIRS)
+                    .add(EverfrostItems.MYRTLE_STAIRS);
+            getOrCreateTagBuilder(ItemTags.WOODEN_TRAPDOORS)
+                    .add(EverfrostItems.MYRTLE_TRAPDOOR);
+            getOrCreateTagBuilder(ItemTags.SAPLINGS)
+                    .add(EverfrostItems.MYRTLE_SAPLING);
+            getOrCreateTagBuilder(ItemTags.WALLS)
+                    .add(EverfrostItems.COBBLED_GLACISTONE_WALL);
+            getOrCreateTagBuilder(ItemTags.SLABS)
+                    .add(EverfrostItems.GLACISTONE_SLAB, EverfrostItems.COBBLED_GLACISTONE_SLAB);
+            getOrCreateTagBuilder(ItemTags.STAIRS)
+                    .add(EverfrostItems.GLACISTONE_STAIRS, EverfrostItems.COBBLED_GLACISTONE_STAIRS);
+            getOrCreateTagBuilder(ItemTags.BUTTONS)
+                    .add(EverfrostItems.GLACISTONE_BUTTON);
         }
+
     }
 
     public static class EverfrostBannerTagsProvider extends FabricTagProvider<BannerPattern> {

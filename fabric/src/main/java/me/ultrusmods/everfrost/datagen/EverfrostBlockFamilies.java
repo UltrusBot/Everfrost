@@ -17,4 +17,17 @@ public class EverfrostBlockFamilies {
             .recipeGroupPrefix("wooden")
             .recipeUnlockedBy("has_planks")
             .getFamily();
+
+    public static final BlockFamily GLACISTONE = BlockFamilies.familyBuilder(EverfrostBlocks.GLACISTONE)
+            .slab(EverfrostBlocks.GLACISTONE_SLAB)
+            .stairs(EverfrostBlocks.GLACISTONE_STAIRS)
+            .button(EverfrostBlocks.GLACISTONE_BUTTON)
+            .pressurePlate(EverfrostBlocks.GLACISTONE_PRESSURE_PLATE)
+            .getFamily();
+
+    public static final BlockFamily COBBLED_GLACISTONE = BlockFamilies.familyBuilder(EverfrostBlocks.COBBLED_GLACISTONE)
+            .slab(EverfrostBlocks.COBBLED_GLACISTONE_SLAB)
+            .stairs(EverfrostBlocks.COBBLED_GLACISTONE_STAIRS)
+            .wall(EverfrostBlocks.COBBLED_GLACISTONE_WALL)
+            .getFamily();
 }

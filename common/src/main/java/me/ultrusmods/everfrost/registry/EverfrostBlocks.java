@@ -126,6 +126,115 @@ public class EverfrostBlocks {
     @RegisterId("potted_myrtle_sapling")
     public static final Block POTTED_MYRTLE_SAPLING = new FlowerPotBlock(MYRTLE_SAPLING, BlockBehaviour.Properties.of().instabreak().noOcclusion().pushReaction(PushReaction.DESTROY));
 
+    @RegisterId("everfrost_dirt")
+    public static final Block EVERFROST_DIRT = new Block(
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.DIRT)
+                    .strength(0.5F)
+                    .sound(SoundType.GRAVEL)
+    );
+
+    @RegisterId("everforst_snowy_dirt")
+    public static final Block EVERFROST_SNOWY_DIRT = new Block(
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.DIRT)
+                    .strength(0.5F)
+                    .sound(SoundType.GRAVEL)
+    );
+
+    @RegisterId("snowy_tall_grass")
+    public static final Block SNOWY_TALL_GRASS = new DoublePlantBlock(
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_WHITE)
+                    .replaceable()
+                    .noCollission()
+                    .instabreak()
+                    .sound(SoundType.GRASS)
+                    .offsetType(BlockBehaviour.OffsetType.XZ)
+                    .ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)
+    );
+
+    @RegisterId("glacistone")
+    public static final Block GLACISTONE = new Block(
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_PURPLE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+    );
+    @RegisterId("glacistone_slab")
+    public static final Block GLACISTONE_SLAB = new SlabBlock(
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_PURPLE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+    );
+    @RegisterId("glacistone_stairs")
+    public static final Block GLACISTONE_STAIRS = new StairBlock(
+            GLACISTONE.defaultBlockState(),
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_PURPLE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+    );
+    @RegisterId("glacistone_button")
+    public static final Block GLACISTONE_BUTTON = stoneButton();
+
+    @RegisterId("glacistone_pressure_plate")
+    public static final Block GLACISTONE_PRESSURE_PLATE = new PressurePlateBlock(
+            EverfrostBlockSetTypes.GLACISTONE,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_PURPLE)
+                    .forceSolidOn()
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .noCollission()
+                    .strength(0.5F)
+                    .ignitedByLava()
+                    .requiresCorrectToolForDrops()
+                    .pushReaction(PushReaction.DESTROY)
+    );
+
+    @RegisterId("cobbled_glacistone")
+    public static final Block COBBLED_GLACISTONE = new Block(
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_PURPLE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F, 6.0F)
+    );
+
+    @RegisterId("cobbled_glacistone_slab")
+    public static final Block COBBLED_GLACISTONE_SLAB = new SlabBlock(
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_PURPLE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F, 6.0F)
+    );
+
+    @RegisterId("cobbled_glacistone_stairs")
+    public static final Block COBBLED_GLACISTONE_STAIRS = new StairBlock(
+            COBBLED_GLACISTONE.defaultBlockState(),
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_PURPLE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F, 6.0F)
+    );
+
+    @RegisterId("cobbled_glacistone_wall")
+    public static final Block COBBLED_GLACISTONE_WALL = new WallBlock(
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_PURPLE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(2.0F, 6.0F)
+    );
+
+
     public static void init() {
         RegisterUtils.register(EverfrostBlocks.class, BuiltInRegistries.BLOCK);
     }
@@ -149,6 +258,9 @@ public class EverfrostBlocks {
 
     public static Block woodenButton(BlockSetType blockSetType) {
         return new ButtonBlock(blockSetType, 30, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
+    }
+    public static Block stoneButton() {
+        return new ButtonBlock(BlockSetType.STONE, 20, BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY));
     }
 
     private static Block leaves(SoundType soundType) {

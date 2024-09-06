@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "everfrost:block/glacistone_pressure_plate"
+    },
+    "powered=true": {
+      "model": "everfrost:block/glacistone_pressure_plate_down"
+    }
+  }
+}
